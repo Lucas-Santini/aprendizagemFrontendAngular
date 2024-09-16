@@ -99,7 +99,6 @@ export class ChapterAssuntoService {
     const apiUrl = `${this.url}/${cursoId}`;
     return this.https.delete<ChapterAssunto>(apiUrl, httpOptions);
   }
-
   FiltrarChapterAssunto(descricaoAssunto: string): Observable<ChapterAssunto[]> {
     const apiUrl = `${this.url}/FiltrarChapterAssunto?descricao=${descricaoAssunto}`;
     return this.https.get<ChapterAssunto[]>(apiUrl);
